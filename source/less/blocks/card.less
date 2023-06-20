@@ -1,0 +1,75 @@
+.card {
+  padding: 40px 20px 20px;
+  background-color: @color-base-white;
+  border-radius: 4px;
+}
+
+.card__title-link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0;
+  color: inherit;
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__desc {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 15px;
+}
+
+.card__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.card__picture {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.card__buy {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 20px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card__price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card__button {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  color: @color-base-white;
+  background-color: @color-base-primary;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    background: url("/img/icons/stack.svg#add-to-basket") no-repeat center/100%;
+    width: 20px;
+    height: 16px;
+    margin-right: 6px;
+  }
+}
