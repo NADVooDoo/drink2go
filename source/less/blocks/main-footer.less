@@ -8,7 +8,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 4px 20px 0 20px;
+
+  @media (min-width: @tablet) {
+    padding: 25px 3px 0 19px;
+  }
 }
 
 .main-footer__header-logo-text {
@@ -20,12 +24,27 @@
 .main-footer__media,
 .main-footer__contacts {
   border-bottom: 1px solid @color-base-secondary;
+
+  @media (min-width: @tablet) {
+    border: 0;
+  }
 }
 
 .main-footer__nav,
-.main-footer__media,
-.main-footer__contacts {
+.main-footer__media {
   padding: 20px 20px 10px;
+
+  @media (min-width: @tablet) {
+    padding: 10px 20px 10px;
+  }
+}
+
+.main-footer__contacts {
+  padding: 21px 20px 22px 20px;
+
+  @media (min-width: @tablet) {
+    padding: 9px 20px 22px;
+  }
 }
 
 .main-footer__nav-title,
@@ -48,7 +67,7 @@
 
 .main-footer__nav-item,
 .main-footer__media-item {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .main-footer__nav-link,
@@ -71,6 +90,10 @@
   color: @color-base-grey;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: @tablet) {
+    padding: 9px 2px 8px 20px;
+  }
 }
 
 .main-footer__copyright-logo-link {
@@ -127,5 +150,14 @@
     height: 16px;
     width: 13px;
     background: url("/img/icons/stack.svg#adress") no-repeat center/100%;
+  }
+}
+
+.main-footer__main {
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 8px;
   }
 }

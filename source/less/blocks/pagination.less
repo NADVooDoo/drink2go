@@ -4,7 +4,11 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   list-style: none;
-  margin: -20px 0 0 -20px;
+  margin: -1px 0 0 -20px;
+
+  @media (min-width: @mobile) {
+    margin: -3px -10px 43px -33px;
+  }
 }
 
 .pagination__item {
@@ -34,15 +38,25 @@
     font-weight: 600;
     color: @color-base-black;
   }
+
+  @media (min-width: @mobile) {
+    padding: 11px 16px 9px 16px;
+  }
 }
 
 .pagination__item-previous-text,
 .pagination__item-next-text {
-  display: none;
+  @media (max-width: @mobile) {
+    display: none;
+  }
 }
 
 .pagination__item-img {
   margin: auto;
+
+  @media (min-width: @mobile) {
+    display: none;
+  }
 }
 
 .pagination__item-img-next {

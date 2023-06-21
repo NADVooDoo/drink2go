@@ -13,14 +13,19 @@
 
 .slider__item {
   flex-shrink: 0;
-  min-height: 660px;
+  min-height: 656px;
 }
 
 .slider__item-inner {
   display: grid;
-  gap: 10px;
+  gap: 5px;
   box-sizing: border-box;
-  padding: 15px 15px 60px;
+  padding: 15px 15px 60px 15px;
+
+  @media (min-width: @tablet) {
+    padding: 60px 60px 0 80px;
+    gap: 20px;
+  }
 }
 
 .slider__description-wrapper {
@@ -31,14 +36,26 @@
 
 .slider__item--decaf {
   background-color: @color-flat-white;
+
+  @media (min-width: @tablet) {
+    background: linear-gradient(180deg, @color-flat-white 77%, transparent 50%);
+  }
 }
 
 .slider__item--lavender {
   background-color: @color-lavender-latte;
+
+  @media (min-width: @tablet) {
+    background: linear-gradient(180deg, @color-lavender-latte 77%, transparent 50%);
+  }
 }
 
 .slider__item--triple {
   background-color: @color-espresso;
+
+  @media (min-width: @tablet) {
+    background: linear-gradient(180deg, @color-espresso 77%, transparent 50%);
+  }
 }
 
 .slider__item-img {
@@ -64,10 +81,19 @@
 
   &::after {
     content: "";
-    width: 20px;
+    width: 30px;
     height: 20px;
     margin: auto;
-    background: url("/img/icons/stack.svg#arrow") no-repeat right 5px center/100%;
+    background: url("/img/icons/stack.svg#arrow") no-repeat right 10px center/100%;
+
+    @media (min-width: @tablet) {
+      background: url("/img/icons/stack.svg#arrow") no-repeat right 2px center/100%;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    width: 80px;
+    height: 77%;
   }
 }
 
@@ -78,6 +104,10 @@
 .slider__arrow--right {
   right: 0;
   transform: scaleX(-1);
+
+  @media (min-width: @tablet) {
+    padding-right: 30px;
+  }
 }
 
 .slider__badge {
@@ -98,18 +128,34 @@
   line-height: 48px;
   letter-spacing: 0.02em;
   padding: 0 20px;
+
+  @media (min-width: @tablet) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+    padding: 0;
+  }
 }
 
 .slider__description {
   margin: 0;
+  padding: 0 5px;
   text-align: center;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 32px;
+    padding-left: 17px;
+    padding-right: 11px;
+  }
 }
 
 .slider__buy {
   margin: 20px 0 0;
   display: flex;
+  align-items: center;
 }
 
 .slider__old-price {

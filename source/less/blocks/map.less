@@ -9,8 +9,16 @@
   background-size: cover;
   z-index: 0;
   box-sizing: border-box;
+
+  @supports (background-image: url("/img/map.webp")) {
+    background-image: url("/img/map.webp");
+  }
 }
 
 .map {
   min-height: 420px;
+
+  @media (min-width: @mobile) {
+    min-height: 480px;
+  }
 }

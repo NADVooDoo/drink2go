@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,14 +15,18 @@
 
   <header class="main-header">
 
-    <a class="main-header__logo">
-      <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="170" height="36">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="82" height="36">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="32" height="36"
-          alt="Логотип магазина Drink2Go">
-      </picture>
-    </a>
+    <div class="main-header__logos">
+      <a class="main-header__logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="170" height="36">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="82" height="36">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="32" height="36"
+            alt="Логотип магазина Drink2Go">
+        </picture>
+      </a>
+
+      <h1 class="main-header__title">Интернет-магазин кофейных напитков Drink2Go.</h1>
+    </div>
 
     <nav class="main-nav main-nav--closed main-nav--nojs">
 
@@ -64,17 +68,16 @@
 
   <main class="main-container">
 
-    <section class="promo">
-      <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go.</h1>
+    <section class="promo promo--nojs">
+      <h2 class="visually-hidden">Новинки</h2>
 
       <div class="slider swiper">
-        <h2 class="visually-hidden">Новинки</h2>
 
         <ul class="slider__list swiper-wrapper">
 
           <li class="slider__item slider__item--decaf swiper-slide">
             <div class="slider__item-inner">
-              <picture>
+              <picture class="slider__item-picture">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/decaf-desktop.webp 1x,
                 img/decaf-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/decaf-mobile-tablet.webp 1x,
@@ -102,7 +105,7 @@
 
           <li class="slider__item slider__item--lavender swiper-slide">
             <div class="slider__item-inner">
-              <picture>
+              <picture class="slider__item-picture">
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="img/lavender-desktop.webp 1x, img/lavender-desktop@2x.webp 2x">
                 <source type="image/webp"
@@ -131,7 +134,7 @@
 
           <li class="slider__item slider__item--triple swiper-slide">
             <div class="slider__item-inner">
-              <picture>
+              <picture class="slider__item-picture">
                 <source type="image/webp" media="(min-width: 1440px)" srcset="img/triple-desktop.webp 1x,
                 img/triple-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/triple-mobile-tablet.webp 1x,
@@ -180,11 +183,9 @@
       <h3 class="advantages__subtitle">Главные причины выбрать Drink2Go</h3>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--speed">
-          <div class="advantages__icon-wrapper">
             <svg class="advantages__item-img advantages__speed-icon" width="50" height="56">
               <use xlink:href="img/icons/stack.svg#speed"></use>
             </svg>
-          </div>
           <div class="advantages__item-wrapper">
             <p class="advantages__heading">Скорость</p>
             <p class="advantages__desc">Готовый напиток всегда под рукой — просто открой банку</p>
@@ -192,23 +193,19 @@
         </li>
 
         <li class="advantages__item advantages__item--conv">
-          <div class="advantages__icon-wrapper">
             <svg class="advantages__item-img advantages__conv-icon" width="52" height="56">
               <use xlink:href="img/icons/stack.svg#conv"></use>
             </svg>
-          </div>
           <div class="advantages__item-wrapper">
             <p class="advantages__heading">Удобство</p>
-            <p class="advantages__desc">Легко помещается и в карман, <br> и в маленькую сумочку</p>
+            <p class="advantages__desc">Легко помещается и в карман, и в маленькую сумочку</p>
           </div>
         </li>
 
         <li class="advantages__item advantages__item--energy">
-          <div class="advantages__icon-wrapper">
             <svg class="advantages__item-img advantages__energy-icon" width="42" height="56">
               <use xlink:href="img/icons/stack.svg#energy"></use>
             </svg>
-          </div>
           <div class="advantages__item-wrapper">
             <p class="advantages__heading">Бодрость</p>
             <p class="advantages__desc">Сбалансированная доза кофеина даст мощный заряд энергии</p>
@@ -216,11 +213,9 @@
         </li>
 
         <li class="advantages__item advantages__item--eco">
-          <div class="advantages__icon-wrapper">
             <svg class="advantages__item-img advantages__eco-icon" width="52" height="56">
               <use xlink:href="img/icons/stack.svg#eco"></use>
             </svg>
-          </div>
           <div class="advantages__item-wrapper">
             <p class="advantages__heading">Экологичность</p>
             <p class="advantages__desc">Вся упаковка сделана <br> из перерабатываемых материалов</p>
@@ -269,7 +264,7 @@
           </fieldset>
 
           <fieldset class="filter__milk">
-            <legend class="filter__legend">Наличие молока</legend>
+            <legend class="filter__legend filter__legend--milk">Наличие молока</legend>
             <ul class="filter__list">
               <li class="filter__item filter__milk-available">
                 <input class="filter__milk-available-input visually-hidden" id="milk-1" name="milk" type="radio"
@@ -295,7 +290,7 @@
           </fieldset>
 
           <fieldset class="filter__country">
-            <legend class="filter__legend">Страна произрастания</legend>
+            <legend class="filter__legend filter__legend--country">Страна произрастания</legend>
             <ul class="filter__list">
               <li class="filter__item filter__country-checker">
                 <input class="filter__country-input visually-hidden" id="brazil" name="country" type="checkbox"
@@ -354,8 +349,8 @@
               <picture class="card__picture">
                 <source type="image/webp" media="(min-width: 320px)" srcset="img/catalog/decaf.webp 1x,
                                   img/catalog/decaf@2x.webp 2x">
-                <img class="card__image" class="card__image" src="img/catalog/decaf.png"
-                  srcset="img/catalog/decaf@2x.png 2x" alt="Фото товара" width="130" height="188">
+                <img class="card__image" src="img/catalog/decaf.png" srcset="img/catalog/decaf@2x.png 2x"
+                  alt="Фото товара" width="130" height="188">
               </picture>
             </a>
             <a class="card__title-link" href="#">

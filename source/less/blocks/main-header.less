@@ -7,6 +7,16 @@
   margin-right: auto;
   margin-left: auto;
   z-index: 2;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: min-content 1fr minmax(min-content, 15%);
+    gap: 20px;
+    padding-right: 3px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: min-content 1fr minmax(min-content, 20%);
+  }
 }
 
 .main-header__link {
@@ -30,6 +40,14 @@
     height: 16px;
     background-color: currentColor;
   }
+
+  @media (min-width: @tablet) {
+    min-height: 80px;
+  }
+}
+
+.main-header__title {
+  display: none;
 }
 
 .main-header__profile {
@@ -60,4 +78,9 @@
   @media (max-width: 767px) {
     order: 3;
   }
+}
+
+.main-header__logo-image {
+  display: block;
+  align-items: center;
 }

@@ -1,8 +1,11 @@
 const menu = () => {
   let navMain = document.querySelector('.main-nav');
   let navToggle = document.querySelector('.main-nav__toggle');
+  let promo = document.querySelector('.promo');
 
   navMain.classList.remove('main-nav--nojs');
+  promo.classList.remove('promo--nojs');
+
 
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--closed')) {
