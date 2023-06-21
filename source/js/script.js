@@ -1,19 +1,16 @@
 const menu = () => {
-  let navMain = document.querySelector('.main-nav');
-  let navToggle = document.querySelector('.main-nav__toggle');
-  let promo = document.querySelector('.promo');
+  let mainHeader = document.querySelector('.main-header');
+  let navToggle = document.querySelector('.main-header__toggle');
 
-  navMain.classList.remove('main-nav--nojs');
-  promo.classList.remove('promo--nojs');
-
+  mainHeader.classList.remove('main-header--nojs');
 
   navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
+    if (mainHeader.classList.contains('main-header--closed')) {
+      mainHeader.classList.remove('main-header--closed');
+      mainHeader.classList.add('main-header--opened');
     } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
+      mainHeader.classList.add('main-header--closed');
+      mainHeader.classList.remove('main-header--opened');
     }
   });
 };

@@ -25,10 +25,18 @@
   @media (min-width: @tablet) {
     margin: 0 0 17px 13px;
   }
+
+  @media (min-width: @desktop) {
+    margin: 0 0 -7px -1px;
+  }
 }
 
 .filter__price {
   margin-bottom: 32px;
+
+  @media (min-width: @desktop) {
+    margin: 19px 0 0 0;
+  }
 }
 
 .filter__milk {
@@ -36,6 +44,10 @@
 
   @media (min-width: @tablet) {
     margin: 0 0 21px 5px;
+  }
+
+  @media (min-width: @tablet) {
+    margin: 0 0 -17px 1px;
   }
 }
 
@@ -46,6 +58,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 9px 24px;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    flex-direction: column;
+    gap: 34px 24px;
   }
 }
 
@@ -222,6 +240,10 @@
   @media (min-width: @tablet) {
     right: 9%;
   }
+
+  @media (min-width: @desktop) {
+    right: 6%;
+  }
 }
 
 .filter__price-controls {
@@ -298,6 +320,11 @@
     padding: 11px 18px;
     margin-left: 9px;
     margin-right: -4px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: -5px;
+    margin-right: 24px;
   }
 }
 

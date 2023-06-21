@@ -7,6 +7,10 @@
   @media (min-width: @tablet) {
     padding: 51px 21px 30px 33px;
   }
+
+  @media (min-width: @desktop) {
+    padding: 50px 31px 31px 25px;
+  }
 }
 
 .card__title-link {
@@ -24,9 +28,12 @@
 
   @media (min-width: @tablet) {
     margin: 30px 0 9px 0;
-
     font-size: 24px;
     line-height: 1.5;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 30px 2px 9px 2px;
   }
 }
 
@@ -37,6 +44,10 @@
 
   @media (min-width: @tablet) {
     margin: 0 0 18px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 22px 18px 0;
   }
 }
 
@@ -62,6 +73,10 @@
 
   @media (min-width: @tablet) {
     gap: 96px;
+  }
+
+  @media (min-width: @desktop) {
+    gap: 20px;
   }
 }
 
@@ -90,9 +105,13 @@
 
   &::before {
     content: "";
-    background: url("/img/icons/stack.svg#add-to-basket") no-repeat center/100%;
+    background: url("../../img/icons/stack.svg#add-to-basket") no-repeat center/100%;
     width: 20px;
     height: 16px;
     margin-right: 6px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 10px 16px;
   }
 }

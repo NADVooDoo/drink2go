@@ -3,15 +3,15 @@
   min-height: 420px;
   height: auto;
   position: relative;
-  background-image: url("/img/map.jpg");
+  background-image: url("../../img/map.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
   box-sizing: border-box;
 
-  @supports (background-image: url("/img/map.webp")) {
-    background-image: url("/img/map.webp");
+  @supports (background-image: url("../../img/map.webp")) {
+    background-image: url("../../img/map.webp");
   }
 }
 
@@ -20,5 +20,9 @@
 
   @media (min-width: @mobile) {
     min-height: 480px;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 540px;
   }
 }
