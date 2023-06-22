@@ -67,6 +67,19 @@
     padding: 8px 20px 9px 20px;
     margin: 0 10px;
   }
+
+  &:hover,
+  &:focus {
+    color: @color-base-primary;
+  }
+
+  &:active {
+    background-color: @color-base-secondary;
+
+    @media (min-width: @tablet) {
+      color: @color-base-primary;
+    }
+  }
 }
 
 .main-header--opened .main-header__toggle {

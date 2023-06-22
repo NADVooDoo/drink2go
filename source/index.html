@@ -5,10 +5,18 @@
   <meta charset="UTF-8">
   <title>Drink2Go - Интернет-магазин кофейных напитков</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -33,11 +41,17 @@
       <ul class="main-header__profile">
         <li>
           <a class="main-header__link main-header__link--user" href="#!">
+            <svg class="main-header__link-icon" width="16" height="16">
+              <use xlink:href="img/icons/stack.svg#user"></use>
+            </svg>
             <span class="main-header__profile-title">Войти</span>
           </a>
         </li>
         <li>
           <a class="main-header__link main-header__link--cart" href="#!">
+            <svg class="main-header__link-icon" width="16" height="16">
+              <use xlink:href="img/icons/stack.svg#cart"></use>
+            </svg>
             <span class="main-header__profile-title">Корзина</span>
           </a>
         </li>
@@ -327,8 +341,8 @@
             </fieldset>
 
             <div class="filter__button-wrapper">
-              <button class="button filter__button" type="submit">Применить</button>
-              <button class="button filter__button filter__button--white" type="reset">Сбросить</button>
+              <button class="filter__button" type="submit">Применить</button>
+              <button class="filter__button filter__button--white" type="reset">Сбросить</button>
             </div>
 
           </form>
@@ -479,7 +493,7 @@
               <a class="pagination__item-link" href="#">1</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__item-link pagination__item-link--current" href="#">2</a>
+              <a class="pagination__item-link pagination__item-link--current">2</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__item-link" href="#">3</a>

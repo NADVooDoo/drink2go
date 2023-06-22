@@ -43,6 +43,16 @@
     color: @color-base-black;
   }
 
+  &:not(.pagination__item-link--current):focus,
+  &:not(.pagination__item-link--current):hover {
+    color: @color-base-white;
+    background-color: @color-primary-lighter;
+  }
+
+  &:not(.pagination__item-link--current):active {
+    background-color: @color-primary-darker;
+  }
+
   @media (min-width: @mobile) {
     padding: 11px 16px 9px 16px;
   }

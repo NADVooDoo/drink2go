@@ -125,6 +125,21 @@
   @media (min-width: @desktop) {
     height: 100%;
   }
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(to right, @color-base-white, transparent);
+  }
+
+  &:active {
+    background-image: linear-gradient(to right, @color-primary-opacity, transparent);
+  }
+
+  &:disabled {
+    color: @color-base-grey;
+    background-image: none;
+    cursor: not-allowed;
+  }
 }
 
 .slider__arrow--left {
@@ -262,6 +277,24 @@
   background-color: @color-base-primary;
   font-size: 16px;
   line-height: 1.5;
+
+  &:active {
+    background-color: @color-primary-darker;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: @color-primary-lighter;
+  }
+
+  &:not(.slider__button--disabled):active {
+    background-color: @color-primary-darker;
+  }
+
+  &--disabled {
+    background-color: @color-base-grey;
+    cursor: not-allowed;
+  }
 }
 
 .slider__bullets {

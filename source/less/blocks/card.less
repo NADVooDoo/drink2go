@@ -47,7 +47,7 @@
   }
 
   @media (min-width: @desktop) {
-    margin: 0 22px 18px 0;
+    margin: 0 22px 19px 0;
   }
 }
 
@@ -113,5 +113,14 @@
 
   @media (min-width: @desktop) {
     padding: 10px 16px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: @color-primary-lighter;
+  }
+
+  &:active {
+    background-color: @color-primary-darker;
   }
 }

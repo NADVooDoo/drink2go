@@ -110,6 +110,26 @@
     box-sizing: border-box;
   }
 
+  &:focus + .filter__milk-available-label::after {
+    background-color: @color-primary-lighter;
+  }
+
+  &:not(:disabled):hover + .filter__milk-available-label::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: @color-primary-opacity;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  &:not(:disabled):not(:checked):hover + .filter__milk-available-label::before {
+    border: 2px solid @color-primary-lighter;
+  }
+
   &:checked + .filter__milk-available-label::before {
     border: 2px solid @color-primary-lighter;
   }
@@ -156,6 +176,11 @@
     box-sizing: border-box;
     background-color: @color-base-white;
     border-radius: 50%;
+  }
+
+  &:not(:disabled):not(:checked):hover + .filter__country-label::before {
+    border: 2px solid @color-primary-lighter;
+    background-color: @color-primary-opacity;
   }
 
   &:checked + .filter__country-label::before {
@@ -226,6 +251,33 @@
   border: 2px solid @color-primary-lighter;
   background: @color-base-white;
   cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: @color-base-primary;
+      opacity: 0.25;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: @color-base-primary;
+      opacity: 1;
+    }
+  }
 }
 
 .filter__range-toggle--min {
@@ -292,6 +344,19 @@
   &[type="number"] {
     appearance: textfield;
   }
+
+  &::placeholder {
+    color: @color-base-grey;
+  }
+
+  &:focus {
+    border: 2px solid @color-primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border: 2px solid @color-light-grey;
+  }
 }
 
 .filter__price-label {
@@ -314,6 +379,17 @@
   &--white {
     background-color: @color-base-white;
     color: @color-base-primary;
+
+    &:focus,
+    &:hover {
+      color: @color-base-white;
+      background-color: @color-primary-lighter;
+    }
+
+    &:active {
+      color: @color-base-white;
+      background-color: @color-primary-darker;
+    }
   }
 
   @media (min-width: @tablet) {
@@ -325,6 +401,15 @@
   @media (min-width: @desktop) {
     margin-left: -5px;
     margin-right: 24px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: @color-primary-lighter;
+  }
+
+  &:active {
+    background-color: @color-primary-darker;
   }
 }
 
