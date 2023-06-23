@@ -170,21 +170,46 @@
   color: inherit;
   cursor: pointer;
   border: none;
+  position: relative;
+
 
   &::before {
-    width: 16px;
-    height: 16px;
     content: "";
-    background: url("../../img/icons/stack.svg#menu") no-repeat center/100%;
+    position: absolute;
+    width: 16px;
+    height: 1.5px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @color-base-black;
+    box-shadow: 0 5px 0 0 @color-base-black, 0 -5px 0 0 @color-base-black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 1.5px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @color-base-black;
+  }
+
+  &:hover::before {
+    box-shadow: 0 5px 0 0 @color-base-primary, 0 -5px 0 0 @color-base-primary;
+  }
+
+  &:hover::after {
+    background-color: @color-base-primary;
   }
 
   @media (min-width: @tablet) {
     display: none;
-  }
-
-  &:hover,
-  &:focus {
-    color: @color-base-primary;
   }
 
   &:active {
@@ -193,5 +218,33 @@
     @media (min-width: @tablet) {
       color: @color-base-primary;
     }
+  }
+}
+
+.main-header--opened .main-header__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 2px;
+    background-color: @color-base-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @color-base-primary;
   }
 }
